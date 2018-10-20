@@ -80,7 +80,7 @@ namespace TheApp
                        g.DrawRectangle(pen, x, y, a.Width, a.Height);
 
                        var brush = new SolidBrush(Color.Yellow);
-                       var font = new Font(FontFamily.GenericSansSerif, 4, FontStyle.Bold);
+                       var font = new Font(FontFamily.GenericSansSerif, 12, FontStyle.Bold);
                        g.DrawString(a.ObjectLabel, font, brush, x, y-20);
 
                        g.DrawString("X", font, new SolidBrush(customColor), a.X, a.Y);

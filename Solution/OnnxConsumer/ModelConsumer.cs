@@ -15,15 +15,12 @@ namespace OnnxConsumer
             var client = new RestClient(webServiceUrl);
 
             var request = new RestRequest(Method.POST);
-            request.AddHeader("Contnet-Type", "application/json");
-
-            // add files to upload (works with compatible verbs)
+            request.AddHeader("Content-Type", "application/json");
             var payload = PrepareWebRequest(imageFilePath);
             request.AddJsonBody(payload);
 
-            // execute the request
-            IRestResponse response = client.Execute(request);
-            var content = response.Content; // raw content as string
+            var response = client.Execute(request);
+            var content = response.Content;
 
             var root = JsonConvert.DeserializeObject<WebServiceResponse>(response.Content);
             var result = JsonConvert.DeserializeObject<Result>(root.result);
