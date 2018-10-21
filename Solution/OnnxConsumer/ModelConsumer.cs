@@ -53,7 +53,6 @@ namespace OnnxConsumer
                         colorChannel.Add(pixels);
                         for (var w = 0; w < image.Width; w++)
                         {
-                            // IMPORTANT
                             var pixel = image.GetPixel(w, h);
                             var v = c == 0 ? pixel.R : c == 1 ? pixel.G : pixel.B;
                             pixels.Add(v);

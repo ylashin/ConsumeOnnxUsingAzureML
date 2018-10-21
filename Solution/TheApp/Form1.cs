@@ -72,7 +72,6 @@ namespace TheApp
                    {
                        Color customColor = Color.FromArgb(random.Next(255), random.Next(255), random.Next(255));
                        var pen = new Pen(customColor, 2);
-                       // IMPORTANT
                        var x = a.X - a.Width / 2;
                        var y = a.Y - a.Height / 2;
 
